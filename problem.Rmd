@@ -5,6 +5,8 @@ date: '`r format(Sys.time(), "%d %B, %Y")`'
 output:
   bookdown::pdf_document2:
     fig_caption: yes
+    includes:
+      in_header: asset/latex/custom.sty
     keep_tex: no
     latex_engine: pdflatex
     number_sections: yes
