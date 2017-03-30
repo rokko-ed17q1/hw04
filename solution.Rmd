@@ -1,0 +1,57 @@
+---
+title: 'hw04: Eigenvalues'
+author: 'Your Name^[Affiliation]'
+date: '`r format(Sys.time(), "%d %B, %Y")`'
+output:
+  bookdown::pdf_document2:
+    fig_caption: yes
+    keep_tex: no
+    latex_engine: pdflatex
+    number_sections: yes
+    template: null
+    toc: no
+  bookdown::html_document2: default
+documentclass: scrartcl
+---
+
+# Problem {-}
+
+Let 
+$$
+B = 
+\begin{bmatrix}
+2 & 0 & 0\\
+0 & 2 & 0\\
+1 & 0 & 2
+\end{bmatrix}. 
+$$
+
+```{r}
+B = matrix(c(
+    2, 0, 0,
+    0, 2, 0,
+    1, 0, 2
+  ), nrow = 3, byrow = TRUE)
+```
+
+Report on what happes if you try to run the following code to check if $B = V\Lambda V^{-1}$ is true? Why does it happen? 
+
+```{r, eval = FALSE}
+r <- eigen(B)
+V <- r$vectors
+Lambda <- diag(r$values)
+
+all.equal(B + 0i, V %*% Lambda %*% solve(V))
+```
+
+# Solution {-}
+<!-- Write your solution below -->
+
+
+
+
+
+
+
+
+
